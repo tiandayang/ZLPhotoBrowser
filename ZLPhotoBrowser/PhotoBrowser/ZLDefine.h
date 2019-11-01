@@ -44,6 +44,7 @@
 #define ZLPhotoBrowserLoadNetImageFailed @"ZLPhotoBrowserLoadNetImageFailed"
 #define ZLPhotoBrowserSaveVideoFailed @"ZLPhotoBrowserSaveVideoFailed"
 #define ZLPhotoBrowserRequestTimeout @"ZLPhotoBrowserRequestTimeout"
+#define ZLPhotoBrowserGIFOverSize @"ZLPhotoBrowserGIFOverSize"
 
 #define ZLPhotoBrowserCameraRoll @"ZLPhotoBrowserCameraRoll"
 #define ZLPhotoBrowserPanoramas @"ZLPhotoBrowserPanoramas"
