@@ -57,3 +57,5 @@
 "ZLPhotoBrowserDepthEffect" = "人像";
 "ZLPhotoBrowserLivePhotos" = "Live Photo";
 "ZLPhotoBrowserAnimated" = "動圖";
+"ZLPhotoBrowserGIFOverSize" = "GIF 文件过大不支持发送";
+
