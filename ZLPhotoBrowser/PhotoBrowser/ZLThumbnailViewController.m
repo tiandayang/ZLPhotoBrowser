@@ -657,6 +657,20 @@ typedef NS_ENUM(NSUInteger, SlideSelectType) {
     ZLImageNavigationController *nav = (ZLImageNavigationController *)self.navigationController;
     ZLPhotoConfiguration *configuration =nav.configuration;
     
+    if (model.type == ZLAssetMediaTypeGif) {
+        __block NSInteger fileSize = 0;
+        PHImageRequestOptions *options = [PHImageRequestOptions new];
+        options.synchronous = YES;
+        [[PHCachingImageManager defaultManager] requestImageDataForAsset:model.asset options:options resultHandler:^(NSData * _Nullable imageData, NSString * _Nullable dataUTI, UIImageOrientation orientation, NSDictionary * _Nullable info) {
+            fileSize = imageData.length;
+        }];
+        
+        if (fileSize > 3 * 1024 * 1024) {
+            ShowToastLong(@"%@", GetLocalLanguageTextValue(ZLPhotoBrowserGIFOverSize));
+            return NO;
+        }
+    }
+    
     if (nav.arrSelectedModels.count >= configuration.maxSelectCount) {
         ShowToastLong(GetLocalLanguageTextValue(ZLPhotoBrowserMaxSelectCountText), configuration.maxSelectCount);
         return NO;
