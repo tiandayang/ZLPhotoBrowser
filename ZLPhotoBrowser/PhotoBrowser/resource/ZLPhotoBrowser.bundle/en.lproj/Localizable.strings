@@ -57,3 +57,5 @@
 "ZLPhotoBrowserDepthEffect" = "Depth Effect";
 "ZLPhotoBrowserLivePhotos" = "Live Photo";
 "ZLPhotoBrowserAnimated" = "Animated";
+"ZLPhotoBrowserGIFOverSize" = "GIF file is too large does not support sending";
+
