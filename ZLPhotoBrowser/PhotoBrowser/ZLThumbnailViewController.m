@@ -665,7 +665,7 @@ typedef NS_ENUM(NSUInteger, SlideSelectType) {
             fileSize = imageData.length;
         }];
         
-        if (fileSize > 3 * 1024 * 1024) {
+        if (fileSize > 5 * 1024 * 1024) {
             ShowToastLong(@"%@", GetLocalLanguageTextValue(ZLPhotoBrowserGIFOverSize));
             return NO;
         }
