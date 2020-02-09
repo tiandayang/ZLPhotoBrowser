@@ -871,7 +871,7 @@
             self.takedImageView.alpha = 1;
         }];
     }
-    
+    self.takedImage = nil;
     [self deleteVideo];
 }
 
